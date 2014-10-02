@@ -1,9 +1,9 @@
-angular.module('eggTart', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('eggTart', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'rumors']);
 
 angular.module('eggTart').config(function($stateProvider, $urlRouterProvider) {
 
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/latest');
 
 });
 

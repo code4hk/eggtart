@@ -17,6 +17,12 @@
         "marker": "/* Add Component LESS Above */",
         "template": "@import \"<%= filename %>\";"
       }
-    }
+    },
+    "modules": [
+      {
+        "name": "rumors",
+        "file": "rumors/rumors.js"
+      }
+    ]
   }
 }
