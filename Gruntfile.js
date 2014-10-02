@@ -125,7 +125,11 @@ module.exports = function (grunt) {
     },
     cssmin: {
       main: {
-        src:['temp/app.css','<%= dom_munger.data.appcss %>'],
+        src:[
+            'temp/app.css',
+            'bower_components/semantic-ui/build/packaged/css/semantic.min.css',
+            '<%= dom_munger.data.appcss %>'
+        ],
         dest:'dist/app.full.min.css'
       }
     },
