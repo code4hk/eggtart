@@ -6,7 +6,7 @@ describe('LatestRumorsCtrl', function() {
 
     beforeEach(inject(function($rootScope, $controller) {
       scope = $rootScope.$new();
-      ctrl = $controller('LatestRumorsCtrl', {$scope: scope});
+      ctrl = $controller('latestRumorsCtrl', {$scope: scope});
     }));	
 
 	it('should ...', inject(function() {

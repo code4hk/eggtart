@@ -1,4 +1,4 @@
-angular.module('rumors').controller('RumorDetailCtrl',function($scope){
+angular.module('rumors').controller('rumorDetailCtrl',function($scope){
 
 
 });
