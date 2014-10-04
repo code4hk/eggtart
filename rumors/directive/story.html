@@ -1,0 +1,43 @@
+<div class="col-md-12" ng-controller="rumorStoryCtrl">
+    <div class="ui rumour-details modal">
+        <i class="close icon"></i>
+
+        <div class="header">
+            {{ story.title }}
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="ui tiny header">來源 Source</div>
+                <div class="ui divided selection list">
+                    <div ng-repeat="source in story.sources">
+                        <a ng-href="source.link" target="_blank" class="item">
+                            {{ source.title }}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ui tiny header">澄清 Clarification</div>
+                <div class="ui divided selection list">
+                    <div ng-repeat="evidence in story.evidences">
+                        <a ng-href="evidence.link" target="_blank" class="item">
+                            {{ evidence.title }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div ng-repeat="image in medias">
+                    <img class="ui huge image" ng-src="image">
+                </div>
+
+                <div>
+                    {{ story.description }}
+                </div>
+
+            </div>
+        </div>
+        <div class="actions">
+            <i class="time icon"></i> {{ story.postedDate }}
+        </div>
+    </div>
+</div>
