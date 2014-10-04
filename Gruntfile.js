@@ -48,7 +48,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
-                    port: 9001,
+                    port: 9002,
                     base: '<%= yeoman.dist %>'
                 }
             }
@@ -216,10 +216,10 @@ module.exports = function (grunt) {
     grunt.registerTask('build', ['jshint', 'clean:before', 'less', 'dom_munger', 'ngtemplates', 'cssmin', 'concat', 'ngmin', 'uglify', 'copy', 'htmlmin', 'imagemin', 'clean:after']);
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
-            return grunt.task.run(['build', 'connect:dist:keepalive']);
+            return grunt.task.run(['connect:dist:keepalive']);
         }
 
-        grunt.task.run(['dom_munger:read', 'jshint', 'connect', 'watch']);
+        grunt.task.run(['dom_munger:read', 'jshint', 'connect:main', 'watch']);
     });
     grunt.registerTask('test', ['dom_munger:read', 'karma:all_tests']);
 
