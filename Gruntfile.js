@@ -102,6 +102,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {src: ['img/**'], dest: '<%= yeoman.dist %>/'},
+                    {src: ['bower_components/semantic-ui/build/minified/fonts/**'], dest: '<%= yeoman.dist %>/fonts/', filter: 'isFile', expand: true, flatten: true}
                     //{src: ['bower_components/font-awesome/fonts/**'], dest: '<%= yeoman.dist %>/', filter: 'isFile', expand: true}
                     //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: '<%= yeoman.dist %>/'},
                     //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'<%= yeoman.dist %>/css/',flatten:true,expand:true},
