@@ -10,7 +10,11 @@ Tackle with Rumors
 3. start develop!
 
 ##Local test
+### dev
 - `grunt serve`
+
+### serve dist version
+- `grunt serve:dist`
 
 ##Build to Github pages
 1. `grunt build`

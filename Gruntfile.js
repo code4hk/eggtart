@@ -37,10 +37,19 @@ module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        yeoman: {
+            dist: 'dist'
+        },
         connect: {
             main: {
                 options: {
                     port: 9001
+                }
+            },
+            dist: {
+                options: {
+                    port: 9001,
+                    base: '<%= yeoman.dist %>'
                 }
             }
         },
@@ -65,7 +74,7 @@ module.exports = function (grunt) {
         },
         clean: {
             before: {
-                src: ['dist', 'temp']
+                src: ['<%= yeoman.dist %>', 'temp']
             },
             after: {
                 src: ['temp']
@@ -92,11 +101,11 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {src: ['img/**'], dest: 'dist/'},
-                    //{src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/', filter: 'isFile', expand: true}
-                    //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'dist/'},
-                    //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
-                    //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
+                    {src: ['img/**'], dest: '<%= yeoman.dist %>/'},
+                    //{src: ['bower_components/font-awesome/fonts/**'], dest: '<%= yeoman.dist %>/', filter: 'isFile', expand: true}
+                    //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: '<%= yeoman.dist %>/'},
+                    //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'<%= yeoman.dist %>/css/',flatten:true,expand:true},
+                    //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: '<%= yeoman.dist %>/'}
                 ]
             }
         },
@@ -119,7 +128,7 @@ module.exports = function (grunt) {
                     ]
                 },
                 src: 'index.html',
-                dest: 'dist/index.html'
+                dest: '<%= yeoman.dist %>/index.html'
             }
         },
         cssmin: {
@@ -129,7 +138,7 @@ module.exports = function (grunt) {
                     'bower_components/semantic-ui/build/packaged/css/semantic.min.css',
                     '<%= dom_munger.data.appcss %>'
                 ],
-                dest: 'dist/app.full.min.css'
+                dest: '<%= yeoman.dist %>/app.full.min.css'
             }
         },
         concat: {
@@ -147,7 +156,7 @@ module.exports = function (grunt) {
         uglify: {
             main: {
                 src: 'temp/app.full.js',
-                dest: 'dist/app.full.min.js'
+                dest: '<%= yeoman.dist %>/app.full.min.js'
             }
         },
         htmlmin: {
@@ -204,7 +213,13 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', ['jshint', 'clean:before', 'less', 'dom_munger', 'ngtemplates', 'cssmin', 'concat', 'ngmin', 'uglify', 'copy', 'htmlmin', 'imagemin', 'clean:after']);
-    grunt.registerTask('serve', ['dom_munger:read', 'jshint', 'connect', 'watch']);
+    grunt.registerTask('serve', function (target) {
+        if (target === 'dist') {
+            return grunt.task.run(['build', 'connect:dist:keepalive']);
+        }
+
+        grunt.task.run(['dom_munger:read', 'jshint', 'connect', 'watch']);
+    });
     grunt.registerTask('test', ['dom_munger:read', 'karma:all_tests']);
 
     grunt.event.on('watch', function (action, filepath) {
