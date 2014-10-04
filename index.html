@@ -3,7 +3,7 @@
 <head>
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
+  <meta charset="utf-8">
     <link href="bower_components/semantic-ui/build/packaged/css/semantic.min.css" type="text/css" rel="stylesheet/less">
     <link href="app.less" type="text/css" rel="stylesheet/less">
 </head>
@@ -34,14 +34,147 @@
   <script src="rumors/partial/latest-rumors/latest-rumors.js"></script>
   <!-- Add New Component JS Above -->
 
-  <div>
+  <!-- <div>
     <div id="content" class="container">
       <div class="row">
         <div ui-view>
         </div>
       </div>
     </div>
+  </div> -->
+  <div class="ui form">
+    <div class="ui left labeled icon input">
+      <input type="text" placeholder="Search">
+      <i class="search icon"></i>
+    </div>
   </div>
 
+  <div class="ui grid">
+    <div class="one column">
+      <a class="ui black label">
+        <i class="location icon"></i> 銅鑼灣 CWB
+      </a>
+      <a class="ui blue label">
+        <i class="location icon"></i> 政總 GovHQ
+        <i class="delete icon"></i>
+      </a>
+      <a class="ui black label">
+        <i class="location icon"></i> 金鐘 Admiralty
+      </a>
+      <a class="ui black label">
+        <i class="location icon"></i> 旺角 Mong Kok
+      </a>
+      <a class="ui black label">
+        <i class="location icon"></i> 中環 Central
+      </a>
+      <a class="ui black label">
+        <i class="location icon"></i> 尖沙咀 Tsim Sha Tsui
+      </a>
+    </div>
+  </div>
+  <div class="ui three column divided grid ">
+    <div class="row">
+      <section class="column">
+        <h4 class="ui inverted green block header">已經證實 Verified</h4>
+        <article class="ui segment raised clickable rumour">
+          <div class="ui ribbon label">蘋果日報 Apple Daily</div>
+          <h4 class="ui header">【特首辦即時】2005</h4>
+          <img class="ui small left floated image" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/p526x296/10356700_10152476395407872_716838026550446340_n.jpg?oh=5d17e4a70c7fe6fce5ddebebebae5c18&oe=54C51580&__gda__=1417935173_c37d9268f0613eb1a915c95db1c3f244">
+          <!-- <div class="ui clearing divider"></div> -->
+          <p>入夜後，包圍特首辦的群眾越來越多，現已衝出特首辦外的一段龍和道馬路。</p>
+
+          <div class="ui clearing divider"></div>
+          <div class="ui top bottom attached label"><i class="time icon"></i> Sun 03/10 16:45</div>
+        </article>
+      </section> 
+      <section class="column">
+        <h4 class="ui inverted black block header">有待證實 Processing</h4>
+        <article class="ui segment raised clickable rumour">
+          <div class="ui ribbon label blue">Facebook</div>
+          <h4 class="ui header">今朝屋企人見到班掛住藍絲帶嘅人係警局外點名</h4>
+          <div class="ui small images">
+            <img class="ui image" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10525804_10154649729665258_5585470551535468871_n.jpg?oh=f136d209f1ee34a70edd2d08c43489f6&oe=54C95A2F&__gda__=1422936912_3394f3eece5401d4e6c295cf1c0a3ee9">
+            <img class="ui image" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10525804_10154649729665258_5585470551535468871_n.jpg?oh=f136d209f1ee34a70edd2d08c43489f6&oe=54C95A2F&__gda__=1422936912_3394f3eece5401d4e6c295cf1c0a3ee9">
+            <img class="ui image" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10525804_10154649729665258_5585470551535468871_n.jpg?oh=f136d209f1ee34a70edd2d08c43489f6&oe=54C95A2F&__gda__=1422936912_3394f3eece5401d4e6c295cf1c0a3ee9">
+            <img class="ui image" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10525804_10154649729665258_5585470551535468871_n.jpg?oh=f136d209f1ee34a70edd2d08c43489f6&oe=54C95A2F&__gda__=1422936912_3394f3eece5401d4e6c295cf1c0a3ee9">
+          </div>
+
+          <div class="ui clearing divider"></div>
+          <div class="ui top bottom attached label"><i class="time icon"></i> Sun 03/10 16:45</div>
+        </article>
+        <article class="ui segment raised clickable rumour">
+          <div class="ui ribbon label green">Whatsapp</div>
+          <h4 class="ui header">昨日下午五時左右，一輛客貨車在灣仔駕駛時，司機突然休克，撞上泥頭車身亡。東方日報隨後用大標題指事件源於佔領運動造成塞車。</h4>
+
+          <div class="ui clearing divider"></div>
+          <div class="ui top bottom attached label"><i class="time icon"></i> Sun 03/10 16:45</div>
+        </article>
+      </section>
+      <section class="column">
+        <h4 class="ui inverted red block header">謠言 Rumours</h4>
+        <article class="ui segment raised clickable rumour">
+          <div class="ui ribbon label blue">Facebook</div>
+          <h4 class="ui header">市民沿金鐘海富中心天橋到政府總部上班，被示威者鐵馬阻撓</h4>
+          <p>大家好，我是今早進入政總如常上班的政府員工，對於今早政總上班情況有如下觀察及澄清。</p>
+          <p>行政署今天是預留了通道予政總員工上班，通道沿途亦有充足保安...</p>
+
+          <div class="ui clearing divider"></div>
+          <div class="ui top bottom attached label"><i class="time icon"></i> Sun 03/10 16:45</div>
+        </article>
+        <article class="ui segment raised clickable rumour">
+          <div class="ui ribbon label">東方日報 Oriental Daily</div>
+          <h4 class="ui header">昨日下午五時左右，一輛客貨車在灣仔駕駛時，司機突然休克，撞上泥頭車身亡。東方日報隨後用大標題指事件源於佔領運動造成塞車。</h4>
+          <img class="ui small left floated image" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10687127_10154631470330494_7242929053154320884_n.jpg?oh=c6c4fc197d1b58fa52fe2c804b86e467&oe=54B05F73&__gda__=1422907404_84215fc3d0a15cbef6465f471fe96e54">
+          <div class="ui clearing divider"></div>
+          <div class="ui top bottom attached label"><i class="time icon"></i> Sun 03/10 16:45</div>
+        </article>
+      </section> 
+    </div>
+  </div>
+
+  <div class="ui rumour-details modal">
+    <i class="close icon"></i>
+    <div class="header">
+      昨日下午五時左右，一輛客貨車在灣仔駕駛時，司機突然休克，撞上泥頭車身亡。東方日報隨後用大標題指事件源於佔領運動造成塞車。
+    </div>
+    <div class="content">
+      <div class="left">
+        <div class="ui tiny header">來源 Source</div>
+        <div class="ui divided selection list">
+          <a href="hhttp://www.info.gov.hk/gia/general/201409/29/P201409291127.htm" target="_blank" class="item">
+            政府新聞公報
+          </a>
+          <a href="http://orientaldaily.on.cc/cnt/news/20140930/00176_088.html?facebook=y" class="item">
+            東方日報
+          </a>
+        </div>
+        <div class="ui tiny header">澄清 Clarification</div>
+        <div class="ui divided selection list">
+          <a href="https://www.facebook.com/photo.php?fbid=10154631470330494&set=a.10150204307775494.450470.870160493&type=1" target="_blank" class="item">
+            家人澄清
+          </a>
+          <a href="http://orientaldaily.on.cc/cnt/news/20140930/00176_088.html?facebook=y" class="item">
+            東方日報已更新標題
+          </a>
+        </div>
+      </div>
+      <div class="right">
+
+        <img class="ui huge image" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10687127_10154631470330494_7242929053154320884_n.jpg?oh=c6c4fc197d1b58fa52fe2c804b86e467&oe=54B05F73&__gda__=1422907404_84215fc3d0a15cbef6465f471fe96e54">
+
+        <p>【本報訊】灣仔交通擠塞，客貨車司機駕駛途中疑病發休克，撼泥頭車身亡。昨午五時許，一輛豐田深藍色客貨車，沿灣仔會議道往北角方向行駛，至舊灣仔碼頭對開天橋底時，姓孫（六十二歲）司機疑患心臟病，突然病發休克，客貨車直衝路邊石壆，再反彈越過對面行車線，撞向一輛泥頭車，當時客貨車後方剛有消防車，消防員即下車施行急救。</p>
+        <p>惟孫送抵醫院，仍告不治，被撞泥頭車司機則無受傷。警員初步調查，相信司機突然病發，引致意外。</p>
+        
+      </div>
+    </div>
+    <div class="actions">
+      <i class="time icon"></i> Sun 03/10 16:45
+    </div>
+  </div>
+  <script type="text/javascript">
+    $('.rumour').on('click', function(){
+      $('.rumour-details.modal').modal('show');
+    })
+  </script>
 </body>
 </html>
