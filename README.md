@@ -4,6 +4,14 @@ eggtart
 
 Tackle with Rumors
 
+##Dev Kickstart
 1. clone this repo
 2. `npm install && bower install`
 3. start develop!
+
+##Local test
+- `grunt serve`
+
+##Build to Github pages
+1. `grunt build`
+2. `grunt gh-pages`
