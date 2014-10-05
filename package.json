@@ -3,8 +3,13 @@
   "version": "2.8.3",
   "private": true,
   "dependencies": {
+    "hexo-admin": "^0.1.3",
+    "hexo-generator-feed": "^0.2.1",
+    "hexo-generator-sitemap": "^0.2.0",
     "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*"
+    "hexo-renderer-jade": "^0.1.0",
+    "hexo-renderer-less": "^0.1.2",
+    "hexo-renderer-marked": "^0.1.0",
+    "hexo-renderer-stylus": "*"
   }
 }

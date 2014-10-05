@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Verified | Code4HK
 subtitle:
 description:
-author: John Doe
+author:
 email:
 language:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://code4hk.github.io/eggtart
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -79,8 +79,28 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: landscape
+theme: jade-barebone
 exclude_generator:
+
+# Markdown
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+# Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 25
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
