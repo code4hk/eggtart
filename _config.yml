@@ -79,7 +79,7 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: jade-barebone
+theme: light
 exclude_generator:
 
 # Markdown
@@ -105,4 +105,6 @@ sitemap:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: github
+  repo: https://github.com/code4hk/eggtart.git
+  branch: gh-pages-test
