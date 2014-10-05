@@ -102,3 +102,9 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+Thumbs.db
+db.json
+debug.log
+public/
+.deploy/
